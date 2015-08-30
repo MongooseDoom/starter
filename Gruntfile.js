@@ -32,12 +32,6 @@ module.exports = function(grunt) {
     watch: {
       files: 'css/scss/*.scss',
       tasks: ['sass']
-    },
-
-    wiredep: {
-      dev: {
-        src: 'index.html'
-      }
     }
   });
 
@@ -45,10 +39,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-wiredep');
 
   // Default task(s).
   grunt.registerTask('default', ['sass', 'browserSync', 'watch']);
-  grunt.registerTask('start', ['sass', 'wiredep']);
 
 };
